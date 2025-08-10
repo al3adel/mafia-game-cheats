@@ -1,0 +1,338 @@
+/* Mafia Game Cheats - CSS Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    background: linear-gradient(45deg, #ffd700, #ff6b35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #cccccc;
+    margin-top: 10px;
+}
+
+.game-interface {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.player-info {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.player-info h2 {
+    color: #ffd700;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat .label {
+    font-weight: bold;
+    color: #cccccc;
+}
+
+.stat .value {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.cheat-panel {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.cheat-panel h2 {
+    color: #ff6b35;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.code-input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cheat-input {
+    flex: 1;
+    padding: 12px 15px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.cheat-input:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.cheat-input::placeholder {
+    color: #888888;
+}
+
+.activate-btn {
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #ff6b35, #ffd700);
+    border: none;
+    border-radius: 8px;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.activate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+.cheat-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.cheat-btn {
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cheat-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.cheat-btn:hover {
+    border-color: #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.cheat-btn:hover:before {
+    left: 100%;
+}
+
+.cheat-btn.locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #ff4444;
+}
+
+.cheat-btn.unlocked {
+    border-color: #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+}
+
+.command-console {
+    grid-column: 1 / -1;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.command-console h2 {
+    color: #00ff00;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.console-output {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0, 255, 0, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    height: 150px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    font-family: 'Courier New', monospace;
+}
+
+.console-line {
+    color: #00ff00;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+.console-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prompt {
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+#commandInput {
+    flex: 1;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0, 255, 0, 0.3);
+    border-radius: 6px;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#commandInput:focus {
+    border-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+#commandInput::placeholder {
+    color: #666666;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888888;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}
+
+/* Animations */
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+    }
+    50% {
+        text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    }
+}
+
+.glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-interface {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .cheat-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff6b35, #ffd700);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ffd700, #ff6b35);
+}
