@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mafia Game Cheats</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Mafia Game Cheats</h1>
+            <p>أدوات الغش للعبة المافيا مع نظام تفعيل الأكواد</p>
+        </header>
+
+        <main>
+            <div class="game-interface">
+                <div class="player-info">
+                    <h2>معلومات اللاعب</h2>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="label">المال:</span>
+                            <span class="value" id="money">$50000</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">الصحة:</span>
+                            <span class="value" id="health">100%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">المستوى:</span>
+                            <span class="value" id="level">25</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cheat-panel">
+                    <h2>🔓 لوحة الأكواد</h2>
+                    <div class="code-input-section">
+                        <input type="text" id="cheatCode" placeholder="أدخل كود التفعيل..." class="cheat-input">
+                        <button onclick="activateCheat()" class="activate-btn">تفعيل</button>
+                    </div>
+                    
+                    <div class="cheat-buttons">
+                        <button onclick="unlimitedMoney()" class="cheat-btn" data-code="RICHLIFE">💰 مال لا نهائي</button>
+                        <button onclick="fullHealth()" class="cheat-btn" data-code="HEALTHY">❤️ صحة كاملة</button>
+                        <button onclick="maxLevel()" class="cheat-btn" data-code="TOPGUN">⭐ مستوى أقصى</button>
+                        <button onclick="allWeapons()" class="cheat-btn" data-code="ARSENAL">🔫 جميع الأسلحة</button>
+                        <button onclick="invincible()" class="cheat-btn" data-code="GODMODE">🛡️ عدم الموت</button>
+                        <button onclick="fastCars()" class="cheat-btn" data-code="SPEED">🏎️ سيارات سريعة</button>
+                    </div>
+                </div>
+
+                <div class="command-console">
+                    <h2>💻 وحدة التحكم</h2>
+                    <div class="console-output" id="console">
+                        <div class="console-line">مرحباً بك في نظام أكواد المافيا</div>
+                        <div class="console-line">اكتب 'help' للحصول على المساعدة</div>
+                    </div>
+                    <div class="console-input">
+                        <span class="prompt">></span>
+                        <input type="text" id="commandInput" placeholder="أدخل الأمر..." onkeypress="handleCommand(event)">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 Mafia Game Cheats - للاستخدام التعليمي فقط</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
